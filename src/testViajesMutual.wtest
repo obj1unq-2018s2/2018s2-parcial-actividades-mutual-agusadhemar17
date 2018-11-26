@@ -13,7 +13,7 @@ describe "viajes" {
 		juana.actividadesRealizadas().add(ecuador)
 	}
 
-	test "Juana es Adoradora del Sol" {
+	test "Juana no es Adoradora del Sol" {
 		assert.notThat(juana.esAdoradorDelSol())
 	}
 
