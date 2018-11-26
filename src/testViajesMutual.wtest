@@ -1,0 +1,21 @@
+import socios.*
+import actividades.*
+
+describe "viajes" {
+
+	var forza = new Gimnasia()
+	var ecuador = new ExcursionACiudadTropical()
+	var juana = new Socio(edad = 30, maxActividadesRealizadas = 3)
+
+	fixture {
+		juana.idiomasQueHabla().add("Espaniol")
+		juana.actividadesRealizadas().add(forza)
+		juana.actividadesRealizadas().add(ecuador)
+	}
+
+	test "Juana es Adoradora del Sol" {
+		assert.notThat(juana.esAdoradorDelSol())
+	}
+
+}
+
